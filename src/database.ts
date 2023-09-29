@@ -2,7 +2,7 @@ import { Client } from "pg";
 
 const db = new Client()
 
-export async function init() {
+export const init = async () => {
 	try {
 		await db.connect()
 		return true
@@ -10,7 +10,7 @@ export async function init() {
 		console.error(error)
 		return false
 	}
-}
+};
 
 export const query = async (text: any, ...rest: any) => {
 	const start = Date.now()

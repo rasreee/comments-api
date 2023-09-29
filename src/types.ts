@@ -6,17 +6,14 @@ export interface Comment {
 	editedAt: string;
 }
 
-
 export interface CreateCommentRequest {
 	user: string;
 	content: string;
 }
 
-
 export interface UpdateCommentRequest {
 	id: any;
 }
-
 
 export interface DeleteCommentRequest {
 	id: any;

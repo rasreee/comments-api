@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 import * as db from './database'
 import { CreateCommentRequest, UpdateCommentRequest, DeleteCommentRequest } from './types';
 
-app.get('/comments', async (req, res) => {
+app.get('/comments', async (_, res) => {
   const query = 'SELECT * from comments'
   try {
     const result = await db.query(query)
